@@ -1,0 +1,16 @@
+.row-3colDesktop-2colMobile {
+  gap: 1rem; 
+}
+.row-3colDesktop-2colMobile > * {
+  flex: 0 0 calc(33.333% - .6667rem);
+}
+@media (max-width: 781px) {
+  .row-3colDesktop-2colMobile > * {
+    flex: 0 0 calc(50% - .6667rem);
+    text-align: center;
+
+    .icon-container {
+      margin: 0 auto;
+    }
+  }
+}

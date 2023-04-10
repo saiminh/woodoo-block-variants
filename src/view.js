@@ -1,0 +1,1 @@
+import './variant-partners-query-view.js';

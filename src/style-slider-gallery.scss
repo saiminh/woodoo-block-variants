@@ -1,0 +1,33 @@
+.is-slider-gallery.is-layout-flex {
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 0;
+  position: relative;
+}
+.is-slider-gallery > * {
+  flex: 0 0 100vw;
+  padding: 0 11vw;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+.slider-gallery-prev,
+.slider-gallery-next {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10vw;
+  padding: 0;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 29 23'%3E%3Cpath stroke='%23FA5A01' d='M11.488.934 1.001 11.42l10.487 10.487M1 11.469h27.672'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+}

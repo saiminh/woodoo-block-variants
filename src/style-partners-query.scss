@@ -1,0 +1,115 @@
+.partners-query {
+ 
+  & .wp-block-post-template {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 0;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    & .wp-block-post {
+      scroll-snap-align: start;
+      flex: 0 0 calc(25% - var(--wp--preset--spacing--outer));
+      margin-top: 0;
+      padding-left: var(--wp--preset--spacing--outer);
+      
+      @media (max-width: 781px) {
+        flex: 0 0 calc(60% - var(--wp--preset--spacing--outer));
+      }
+
+      & > div {
+        position: relative;
+        height: 100%;
+      }
+
+      & .wp-block-post-content {
+        padding-bottom: 7vw;
+        @media (max-width: 781px) {
+          padding-bottom: 14vw;
+        }
+      }
+
+      & .wp-block-post-featured-image {
+        aspect-ratio: 1;
+        width: 100%;
+
+        & img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      & .wp-block-create-block-woodoo-partner-logos {
+        position: absolute;
+        left: var(--wp--preset--spacing--s);
+        bottom: var(--wp--preset--spacing--s);
+
+        & figure {
+          margin: 0;
+        }
+      }
+      & .wp-block-create-block-woodoo-partner-logos img,
+      & .wp-block-create-block-woodoo-partner-logos svg {
+        max-width: 7vw;
+        max-height: 4vw;
+        @media (max-width: 781px) {
+          max-width: 14vw;
+          max-height: 8vw;
+
+        }
+      }
+      & .wp-block-post-terms a {
+        color: inherit;
+        text-decoration: none;
+        pointer-events: none;
+        font-weight: 300;
+      }
+      & p {
+        text-transform: uppercase;
+        line-height: 1.2;
+        font-weight: 300;
+        font-size: var(--wp--preset--font-size--12);
+      }
+      & .wp-block-post-title {
+        font-size: var(--wp--preset--font-size--20);
+      }
+    }
+    .block-editor-block-list__block {
+      position: static;
+    }
+  }
+  .partner-nav-left,
+  .partner-nav-right {
+
+    & .wp-block-button__link {
+      margin: 0 var(--wp--preset--spacing--outer);
+      font-size: 2em;
+      padding: 0 1.5em!important;
+      font-weight: 300;
+      overflow: hidden;
+      text-indent: -2000px;
+      position: relative;
+    }
+    & .wp-block-button__link:after {
+      content: '';
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 29 23'%3E%3Cpath stroke='currentColor' d='M11.355 1.012.868 11.499l10.487 10.487M.867 11.543h27.672'/%3E%3C/svg%3E") no-repeat 50% 50%;
+      background-size: contain;
+      width: 1em;
+      height: 1em;
+      position: absolute;
+      right: 1em;
+      top: 0.125em;
+    }
+  }
+  .partner-nav-right {
+    & .wp-block-button__link:after {
+      transform: rotate(180deg);
+    }
+  }
+}
