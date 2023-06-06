@@ -10,6 +10,7 @@ const initParterQueries = () => {
 const initPartnerQuery = (pQuery) => {
   const scroller = pQuery.querySelector('.wp-block-post-template');
   const onePost = pQuery.querySelector('.wp-block-post');
+  if (!onePost) return;
   let postDimensions = onePost.getBoundingClientRect();
   const navLeft = pQuery.querySelector('.partner-nav-left');
   const navRight = pQuery.querySelector('.partner-nav-right');
